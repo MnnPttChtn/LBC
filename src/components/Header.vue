@@ -14,7 +14,7 @@
           </button>
           <div class="search">
             <input type="text" name="search" id="search" placeholder="Rechercher sur leboncoin" />
-            <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
+            <font-awesome-icon :icon="['fas', 'search']" />
           </div>
         </div>
 
@@ -52,13 +52,19 @@
 <style scoped>
 header {
   border-bottom: 1px solid var(--grey);
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 5;
   height: var(--header-height);
 }
 .container {
   padding: 10px 0 20px 0;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 }
 
 /* TOP*/

@@ -3,14 +3,43 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faSearch, faCircle } from '@fortawesome/free-solid-svg-icons'
-import { faPlusSquare, faUser } from '@fortawesome/free-regular-svg-icons'
 
-library.add(faUser, faPlusSquare, faSearch, faCircle)
+// Import de FontAwesome Core
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+// Import du composant vue-fontawesome
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+// Import icône
+import { faPlusSquare, faHeart, faClock, faUser } from '@fortawesome/free-regular-svg-icons'
+
+import {
+  faCheckDouble,
+  faMapMarkerAlt,
+  faCircle,
+  faSearch,
+  faAngleLeft,
+  faAngleRight,
+  faMapMarked,
+} from '@fortawesome/free-solid-svg-icons'
+
+// Ajout de l'icône à la bibliothèque
+library.add(
+  faPlusSquare,
+  faHeart,
+  faCheckDouble,
+  faClock,
+  faMapMarkerAlt,
+  faMapMarked,
+  faUser,
+  faCircle,
+  faSearch,
+  faAngleLeft,
+  faAngleRight,
+)
 
 const app = createApp(App).component('font-awesome-icon', FontAwesomeIcon)
+
 app.use(router)
 
 app.mount('#app')
